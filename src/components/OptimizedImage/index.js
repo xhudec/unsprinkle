@@ -24,8 +24,8 @@ const getJpgSrcSet = (src) =>
 const OptimizedImage = ({ src, alt, ...restProps }) => {
   return (
     <picture {...restProps}>
-      <source srcSet={getAvifSrcSet(src)} />
-      <source srcSet={getJpgSrcSet(src)} />
+      <source type="image/avif" srcSet={getAvifSrcSet(src)} />
+      <source type="image/jpeg" srcSet={getJpgSrcSet(src)} />
       <Image alt={alt} src={src} />
     </picture>
   );
